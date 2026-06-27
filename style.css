@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1f2833, #0b0c10);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 3px solid #45f3ff;
+}
+
+header h1 {
+    color: #45f3ff;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #45f3ff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #66fcf1;
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: #1f2833;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #66fcf1;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0b0c10;
+    background-color: #66fcf1;
+    border-radius: 4px;
+    box-shadow: 0 0 15px #66fcf1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.gallery {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.gallery-item {
+    background-color: #1f2833;
+    height: 150px;
+    border: 2px solid #45f3ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66fcf1;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(69, 243, 255, 0.2);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #45f3ff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+main {
+    background-color: #12141c;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #66fcf1;
+}
+
+main h2 {
+    color: #45f3ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #45f3ff;
+}
+
+main p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.section-title {
+    color: #66fcf1;
+    margin: 20px 0 10px 0;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #1f2833;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #45f3ff;
+}
+
+.widget h3 {
+    color: #66fcf1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #66fcf1;
+    padding-bottom: 5px;
+}
+
+.quote-box {
+    font-style: italic;
+    color: #c5c6c7;
+    border-left: 3px solid #ff007f;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #0b0c10;
+    text-align: center;
+    padding: 20px;
+    color: #45a29e;
+    border-top: 1px solid #1f2833;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    nav a {
+        margin: 5px;
+        padding: 5px 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+.profile-container {
+    background-color: #1f2833;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #66fcf1;
+    margin-top: 15px;
+}
+
+.profile-container p {
+    margin-bottom: 10px;
+}
+
+.profile-container strong {
+    color: #45f3ff;
+}
+
+.fav-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #12141c;
+}
+
+.fav-table th, .fav-table td {
+    border: 1px solid #1f2833;
+    padding: 12px;
+    text-align: left;
+}
+
+.fav-table th {
+    background-color: #1f2833;
+    color: #45f3ff;
+    text-transform: uppercase;
+}
+
+.fav-table tr:hover {
+    background-color: rgba(69, 243, 255, 0.05);
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.contact-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #1f2833;
+}
+
+.contact-list strong {
+    color: #66fcf1;
+}
+
+.contact-list a {
+    color: #45f3ff;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
